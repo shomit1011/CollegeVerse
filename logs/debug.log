@@ -1,0 +1,1054 @@
+
+ERROR 2022-06-16 15:42:02,723 views 22172 2552 Exception In:  TestView
+ERROR 2022-06-16 15:42:13,683 views 22172 20808 Exception In:  TestView
+ERROR 2022-06-16 15:42:20,059 views 22172 10212 Exception In:  TestView
+ERROR 2022-06-16 15:42:27,267 views 22172 10212 Exception In:  TestView
+ERROR 2022-06-16 15:42:44,349 log 22172 10212 Internal Server Error: /admin/api/mcqtypequestion/
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\db\backends\sqlite3\base.py", line 416, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: api_mcqtypequestion.img_option
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\contrib\admin\options.py", line 622, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\contrib\admin\sites.py", line 236, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\import_export\admin.py", line 308, in changelist_view
+    return super().changelist_view(request, extra_context)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\import_export\admin.py", line 440, in changelist_view
+    return super().changelist_view(request, extra_context)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\contrib\admin\options.py", line 1807, in changelist_view
+    media = self.media + formset.media
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\forms\formsets.py", line 455, in media
+    if self.forms:
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\forms\formsets.py", line 162, in forms
+    for i in range(self.total_form_count())
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\forms\formsets.py", line 137, in total_form_count
+    initial_forms = self.initial_form_count()
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\forms\models.py", line 584, in initial_form_count
+    return len(self.get_queryset())
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\db\models\query.py", line 262, in __len__
+    self._fetch_all()
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\db\models\query.py", line 1354, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\db\models\query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\db\models\sql\compiler.py", line 1202, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\db\backends\utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\db\backends\utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\db\backends\utils.py", line 80, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\db\backends\sqlite3\base.py", line 416, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: api_mcqtypequestion.img_option
+ERROR 2022-06-16 15:42:44,374 basehttp 22172 10212 "GET /admin/api/mcqtypequestion/ HTTP/1.1" 500 203088
+ERROR 2022-06-16 15:45:41,783 log 17932 4436 Internal Server Error: /admin/api/mcqtypequestion/
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\db\backends\sqlite3\base.py", line 416, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: api_mcqtypequestion.img_option
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\contrib\admin\options.py", line 622, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\contrib\admin\sites.py", line 236, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\import_export\admin.py", line 308, in changelist_view
+    return super().changelist_view(request, extra_context)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\import_export\admin.py", line 440, in changelist_view
+    return super().changelist_view(request, extra_context)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\contrib\admin\options.py", line 1807, in changelist_view
+    media = self.media + formset.media
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\forms\formsets.py", line 455, in media
+    if self.forms:
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\forms\formsets.py", line 162, in forms
+    for i in range(self.total_form_count())
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\forms\formsets.py", line 137, in total_form_count
+    initial_forms = self.initial_form_count()
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\forms\models.py", line 584, in initial_form_count
+    return len(self.get_queryset())
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\db\models\query.py", line 262, in __len__
+    self._fetch_all()
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\db\models\query.py", line 1354, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\db\models\query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\db\models\sql\compiler.py", line 1202, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\db\backends\utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\db\backends\utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\db\backends\utils.py", line 80, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\db\backends\sqlite3\base.py", line 416, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: api_mcqtypequestion.img_option
+ERROR 2022-06-16 15:45:41,814 basehttp 17932 4436 "GET /admin/api/mcqtypequestion/ HTTP/1.1" 500 203225
+ERROR 2022-06-16 15:45:42,947 log 17932 4436 Internal Server Error: /admin/api/mcqtypequestion/
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\db\backends\sqlite3\base.py", line 416, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: api_mcqtypequestion.img_option
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\contrib\admin\options.py", line 622, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\contrib\admin\sites.py", line 236, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\import_export\admin.py", line 308, in changelist_view
+    return super().changelist_view(request, extra_context)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\import_export\admin.py", line 440, in changelist_view
+    return super().changelist_view(request, extra_context)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\contrib\admin\options.py", line 1807, in changelist_view
+    media = self.media + formset.media
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\forms\formsets.py", line 455, in media
+    if self.forms:
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\forms\formsets.py", line 162, in forms
+    for i in range(self.total_form_count())
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\forms\formsets.py", line 137, in total_form_count
+    initial_forms = self.initial_form_count()
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\forms\models.py", line 584, in initial_form_count
+    return len(self.get_queryset())
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\db\models\query.py", line 262, in __len__
+    self._fetch_all()
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\db\models\query.py", line 1354, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\db\models\query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\db\models\sql\compiler.py", line 1202, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\db\backends\utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\db\backends\utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\db\backends\utils.py", line 80, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Chandan\Desktop\pythonmate\Apni-Academy-master\Apni-Academy\env\lib\site-packages\django\db\backends\sqlite3\base.py", line 416, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: api_mcqtypequestion.img_option
+ERROR 2022-06-16 15:45:42,947 basehttp 17932 4436 "GET /admin/api/mcqtypequestion/ HTTP/1.1" 500 203225
+ERROR 2022-06-19 07:12:32,146 views 10453 140053322577472 Exception In:  PaperView
+ERROR 2022-06-19 07:12:56,592 views 10453 140053322577472 Exception In:  TestView
+ERROR 2022-06-19 07:13:38,759 log 11291 140343732192832 Internal Server Error: /test-series/1/
+Traceback (most recent call last):
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/contrib/auth/mixins.py", line 71, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/views/generic/base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/sunny/Desktop/projects/Apni-Academy/frontend/views.py", line 214, in get
+    return render(request,'frontend/test_window.html',context)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: frontend/test_window.html
+ERROR 2022-06-19 07:13:38,760 basehttp 11291 140343732192832 "GET /test-series/1/ HTTP/1.1" 500 112287
+ERROR 2022-06-19 07:14:04,449 views 11291 140343732192832 Exception In:  PaperView
+ERROR 2022-06-19 07:14:14,392 log 11291 140343732192832 Internal Server Error: /test-series/1/
+Traceback (most recent call last):
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/contrib/auth/mixins.py", line 71, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/views/generic/base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/sunny/Desktop/projects/Apni-Academy/frontend/views.py", line 214, in get
+    return render(request,'frontend/test_window.html',context)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: frontend/test_window.html
+ERROR 2022-06-19 07:14:14,392 basehttp 11291 140343732192832 "GET /test-series/1/ HTTP/1.1" 500 112287
+ERROR 2022-06-19 16:50:37,780 log 6398 140335226279488 Internal Server Error: /test-series/6/
+Traceback (most recent call last):
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/contrib/auth/mixins.py", line 71, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/views/generic/base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/sunny/Desktop/projects/Apni-Academy/frontend/views.py", line 204, in get
+    q1=MCQTypeQuestion.objects.filter(section=sections[0])
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/db/models/query.py", line 322, in __getitem__
+    return qs._result_cache[0]
+IndexError: list index out of range
+ERROR 2022-06-19 16:50:37,781 basehttp 6398 140335226279488 "GET /test-series/6/ HTTP/1.1" 500 89362
+ERROR 2022-06-19 18:51:28,272 views 15804 139929357379136 Exception In:  ResultView
+ERROR 2022-06-19 20:46:35,891 views 16449 139711214782016 Exception In:  PaperView
+ERROR 2022-06-19 20:57:11,204 log 16449 139710982776384 Internal Server Error: /test-series/6/
+Traceback (most recent call last):
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/contrib/auth/mixins.py", line 71, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/views/generic/base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/sunny/Desktop/projects/Apni-Academy/frontend/views.py", line 204, in get
+    q1=MCQTypeQuestion.objects.filter(section=sections[0])
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/db/models/query.py", line 322, in __getitem__
+    return qs._result_cache[0]
+IndexError: list index out of range
+ERROR 2022-06-19 20:57:11,205 basehttp 16449 139710982776384 "GET /test-series/6/ HTTP/1.1" 500 89362
+ERROR 2022-06-19 21:12:25,150 log 19287 140006367249984 Internal Server Error: /test-series/2/
+Traceback (most recent call last):
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/template/base.py", line 862, in _resolve_lookup
+    current = current[bit]
+TypeError: 'ImageFieldFile' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/contrib/auth/mixins.py", line 71, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/views/generic/base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/sunny/Desktop/projects/Apni-Academy/frontend/views.py", line 214, in get
+    return render(request,'frontend/test_window.html',context)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/template/base.py", line 176, in render
+    return self._render(context)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/template/base.py", line 168, in _render
+    return self.nodelist.render(context)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/template/base.py", line 977, in render
+    return SafeString(''.join([
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/template/base.py", line 978, in <listcomp>
+    node.render_annotated(context) for node in self
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/template/base.py", line 938, in render_annotated
+    return self.render(context)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/template/defaulttags.py", line 214, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/template/base.py", line 938, in render_annotated
+    return self.render(context)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/template/defaulttags.py", line 295, in render
+    return nodelist.render(context)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/template/base.py", line 977, in render
+    return SafeString(''.join([
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/template/base.py", line 978, in <listcomp>
+    node.render_annotated(context) for node in self
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/template/base.py", line 938, in render_annotated
+    return self.render(context)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/template/defaulttags.py", line 295, in render
+    return nodelist.render(context)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/template/base.py", line 977, in render
+    return SafeString(''.join([
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/template/base.py", line 978, in <listcomp>
+    node.render_annotated(context) for node in self
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/template/base.py", line 938, in render_annotated
+    return self.render(context)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/template/base.py", line 1038, in render
+    output = self.filter_expression.resolve(context)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/template/base.py", line 701, in resolve
+    obj = self.var.resolve(context)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/template/base.py", line 829, in resolve
+    value = self._resolve_lookup(context)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/template/base.py", line 870, in _resolve_lookup
+    current = getattr(current, bit)
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/db/models/fields/files.py", line 63, in url
+    self._require_file()
+  File "/home/sunny/Desktop/projects/Apni-Academy/env/lib/python3.8/site-packages/django/db/models/fields/files.py", line 40, in _require_file
+    raise ValueError("The '%s' attribute has no file associated with it." % self.field.name)
+ValueError: The 'question_image' attribute has no file associated with it.
+ERROR 2022-06-19 21:12:25,152 basehttp 19287 140006367249984 "GET /test-series/2/ HTTP/1.1" 500 217973
+ERROR 2022-07-17 17:50:08,764 log 10384 12820 Internal Server Error: /coupon-code/
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\frontend\views.py", line 96, in post
+    return Response(context,status=200)
+NameError: name 'Response' is not defined
+ERROR 2022-07-17 17:50:08,780 basehttp 10384 12820 "POST /coupon-code/ HTTP/1.1" 500 96599
+ERROR 2022-07-26 12:05:06,007 log 15724 19192 Internal Server Error: /ecounselling/apply/
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'coupon_code'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\frontend\views.py", line 92, in post
+    coupon_code=request.data['coupon_code']
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'coupon_code'
+ERROR 2022-07-26 12:05:06,023 basehttp 15724 19192 "POST /ecounselling/apply/ HTTP/1.1" 500 107906
+ERROR 2022-07-26 12:05:28,657 log 15724 19192 Internal Server Error: /ecounselling/apply/
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'coupon_code'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\frontend\views.py", line 92, in post
+    coupon_code=request.data['coupon_code']
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'coupon_code'
+ERROR 2022-07-26 12:05:28,657 basehttp 15724 19192 "POST /ecounselling/apply/ HTTP/1.1" 500 107906
+ERROR 2022-07-26 12:13:58,490 log 5280 10804 Internal Server Error: /ecounselling/apply/
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'coupon_code'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\frontend\views.py", line 92, in post
+    coupon_code=request.data["coupon_code"]
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'coupon_code'
+ERROR 2022-07-26 12:13:58,498 basehttp 5280 10804 "POST /ecounselling/apply/ HTTP/1.1" 500 107919
+ERROR 2022-07-26 12:18:23,379 log 15816 13492 Internal Server Error: /ecounselling/apply/
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'coupon_code'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\frontend\views.py", line 92, in post
+    coupon_code=request.POST["coupon_code"]
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'coupon_code'
+ERROR 2022-07-26 12:18:23,395 basehttp 15816 13492 "POST /ecounselling/apply/ HTTP/1.1" 500 107919
+ERROR 2022-07-26 12:21:02,747 log 15288 20472 Internal Server Error: /ecounselling/apply/
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'coupon_code'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\frontend\views.py", line 92, in post
+    coupon_code=request.POST["coupon_code"]
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'coupon_code'
+ERROR 2022-07-26 12:21:02,771 basehttp 15288 20472 "POST /ecounselling/apply/ HTTP/1.1" 500 107919
+ERROR 2022-07-26 12:21:08,923 log 15288 20472 Internal Server Error: /ecounselling/apply/
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'coupon_code'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\frontend\views.py", line 92, in post
+    coupon_code=request.POST["coupon_code"]
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'coupon_code'
+ERROR 2022-07-26 12:21:08,923 basehttp 15288 20472 "POST /ecounselling/apply/ HTTP/1.1" 500 107919
+ERROR 2022-07-26 10:36:12,568 views 16596 8632 Exception In:  CollegePredictionView post request
+ERROR 2022-07-26 15:12:01,534 log 23824 19144 Internal Server Error: /ecounselling/apply/
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\frontend\views.py", line 111, in ApplyCouponView
+    coupon_code=request.data['coupon_code']
+AttributeError: 'WSGIRequest' object has no attribute 'data'
+ERROR 2022-07-26 15:12:01,537 basehttp 23824 19144 "POST /ecounselling/apply/ HTTP/1.1" 500 73383
+ERROR 2022-07-26 15:12:35,959 log 2528 4088 Internal Server Error: /ecounselling/apply/
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\response.py", line 55, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+AssertionError: .accepted_renderer not set on Response
+ERROR 2022-07-26 15:12:35,959 basehttp 2528 4088 "POST /ecounselling/apply/ HTTP/1.1" 500 77585
+ERROR 2022-07-26 15:14:44,594 log 7544 10792 Internal Server Error: /ecounselling/apply/
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\renderers.py", line 159, in render
+    template_names = self.get_template_names(response, view)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\renderers.py", line 187, in get_template_names
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Returned a template response with no `template_name` attribute set on either the view or response
+ERROR 2022-07-26 15:14:44,594 basehttp 7544 10792 "POST /ecounselling/apply/ HTTP/1.1" 500 88411
+ERROR 2022-07-26 15:17:24,114 log 1296 1820 Internal Server Error: /ecounselling/apply/
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\renderers.py", line 159, in render
+    template_names = self.get_template_names(response, view)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\renderers.py", line 187, in get_template_names
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Returned a template response with no `template_name` attribute set on either the view or response
+ERROR 2022-07-26 15:17:24,114 basehttp 1296 1820 "POST /ecounselling/apply/ HTTP/1.1" 500 87675
+ERROR 2022-07-26 15:17:42,768 log 19248 11436 Internal Server Error: /ecounselling/apply/
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\response.py", line 55, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+AssertionError: .accepted_renderer not set on Response
+ERROR 2022-07-26 15:17:42,768 basehttp 19248 11436 "POST /ecounselling/apply/ HTTP/1.1" 500 77585
+ERROR 2022-07-26 15:20:16,252 log 3208 24360 Internal Server Error: /ecounselling/apply/
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\response.py", line 55, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+AssertionError: .accepted_renderer not set on Response
+ERROR 2022-07-26 15:20:16,261 basehttp 3208 24360 "POST /ecounselling/apply/ HTTP/1.1" 500 77585
+ERROR 2022-07-26 15:20:22,679 log 3208 24360 Internal Server Error: /ecounselling/apply/
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\response.py", line 55, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+AssertionError: .accepted_renderer not set on Response
+ERROR 2022-07-26 15:20:22,680 basehttp 3208 24360 "POST /ecounselling/apply/ HTTP/1.1" 500 77585
+ERROR 2022-07-26 15:21:00,864 log 3208 24168 Internal Server Error: /ecounselling/apply/
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\response.py", line 55, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+AssertionError: .accepted_renderer not set on Response
+ERROR 2022-07-26 15:21:00,865 basehttp 3208 24168 "POST /ecounselling/apply/ HTTP/1.1" 500 77585
+ERROR 2022-07-26 15:21:30,537 log 15864 15176 Internal Server Error: /ecounselling/apply/
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\response.py", line 55, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+AssertionError: .accepted_renderer not set on Response
+ERROR 2022-07-26 15:21:30,551 basehttp 15864 15176 "POST /ecounselling/apply/ HTTP/1.1" 500 77585
+ERROR 2022-07-26 15:22:19,574 log 3580 23060 Internal Server Error: /ecounselling/apply/
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\response.py", line 55, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+AssertionError: .accepted_renderer not set on Response
+ERROR 2022-07-26 15:22:19,582 basehttp 3580 23060 "POST /ecounselling/apply/ HTTP/1.1" 500 77585
+ERROR 2022-07-26 15:22:23,135 log 3580 23060 Internal Server Error: /ecounselling/apply/
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\response.py", line 55, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+AssertionError: .accepted_renderer not set on Response
+ERROR 2022-07-26 15:22:23,136 basehttp 3580 23060 "POST /ecounselling/apply/ HTTP/1.1" 500 77585
+ERROR 2022-07-26 15:22:26,194 log 3580 12748 Internal Server Error: /ecounselling/apply/
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\response.py", line 55, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+AssertionError: .accepted_renderer not set on Response
+ERROR 2022-07-26 15:22:26,195 basehttp 3580 12748 "POST /ecounselling/apply/ HTTP/1.1" 500 77585
+ERROR 2022-07-26 15:22:42,043 log 16400 12232 Internal Server Error: /ecounselling/apply/
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\response.py", line 55, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+AssertionError: .accepted_renderer not set on Response
+ERROR 2022-07-26 15:22:42,053 basehttp 16400 12232 "POST /ecounselling/apply/ HTTP/1.1" 500 77585
+ERROR 2022-07-26 15:28:17,940 log 11152 9912 Internal Server Error: /ecounselling/apply/
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\frontend\views.py", line 119, in ApplyCouponView
+    discount_price=coupon.discount
+AttributeError: 'NoneType' object has no attribute 'discount'
+ERROR 2022-07-26 15:28:17,955 basehttp 11152 9912 "POST /ecounselling/apply/ HTTP/1.1" 500 104585
+ERROR 2022-07-26 15:29:10,374 log 11152 25544 Internal Server Error: /ecounselling/apply/
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\frontend\views.py", line 121, in ApplyCouponView
+    return redirect('EcounsellingView')
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\shortcuts.py", line 41, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\shortcuts.py", line 130, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\urls\base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\urls\resolvers.py", line 729, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'EcounsellingView' not found. 'EcounsellingView' is not a valid view function or pattern name.
+ERROR 2022-07-26 15:29:10,381 basehttp 11152 25544 "POST /ecounselling/apply/ HTTP/1.1" 500 123705
+ERROR 2022-07-26 15:36:15,727 log 17236 24168 Internal Server Error: /ecounselling/apply/
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\frontend\views.py", line 122, in ApplyCouponView
+    return redirect("ecounselling",discount_price=discount_price)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\shortcuts.py", line 41, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\shortcuts.py", line 130, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\urls\base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\urls\resolvers.py", line 729, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'ecounselling' with keyword arguments '{'discount_price': 250}' not found. 1 pattern(s) tried: ['ecounselling/\\Z']
+ERROR 2022-07-26 15:36:15,742 basehttp 17236 24168 "POST /ecounselling/apply/ HTTP/1.1" 500 125504
+ERROR 2022-07-26 15:37:12,492 log 6276 5648 Internal Server Error: /ecounselling/apply/
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\frontend\views.py", line 122, in ApplyCouponView
+    return redirect("ecounselling",discount_price=discount_price)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\shortcuts.py", line 41, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\shortcuts.py", line 130, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\urls\base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\urls\resolvers.py", line 729, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'ecounselling' with keyword arguments '{'discount_price': 250}' not found. 1 pattern(s) tried: ['ecounselling/\\Z']
+ERROR 2022-07-26 15:37:12,509 basehttp 6276 5648 "POST /ecounselling/apply/ HTTP/1.1" 500 125504
+ERROR 2022-07-26 15:41:04,519 log 25388 15256 Internal Server Error: /ecounselling/apply/
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\frontend\views.py", line 122, in ApplyCouponView
+    return redirect(reverse('ecounselling', kwargs={"discount_price": discount_price}))
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\urls\base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\urls\resolvers.py", line 729, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'ecounselling' with keyword arguments '{'discount_price': 250}' not found. 1 pattern(s) tried: ['ecounselling/\\Z']
+ERROR 2022-07-26 15:41:04,544 basehttp 25388 15256 "POST /ecounselling/apply/ HTTP/1.1" 500 117325
+ERROR 2022-07-26 15:41:08,609 log 25388 15256 Internal Server Error: /ecounselling/apply/
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\frontend\views.py", line 122, in ApplyCouponView
+    return redirect(reverse('ecounselling', kwargs={"discount_price": discount_price}))
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\urls\base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\urls\resolvers.py", line 729, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'ecounselling' with keyword arguments '{'discount_price': 250}' not found. 1 pattern(s) tried: ['ecounselling/\\Z']
+ERROR 2022-07-26 15:41:08,610 basehttp 25388 15256 "POST /ecounselling/apply/ HTTP/1.1" 500 117325
+ERROR 2022-07-26 15:41:36,621 log 22576 19308 Internal Server Error: /ecounselling/apply/
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\frontend\views.py", line 122, in ApplyCouponView
+    return redirect(reverse('ecounselling', kwargs={"discount_price": discount_price}))
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\urls\base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\urls\resolvers.py", line 729, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'ecounselling' with keyword arguments '{'discount_price': 250}' not found. 1 pattern(s) tried: ['ecounselling/\\Z']
+ERROR 2022-07-26 15:41:36,626 basehttp 22576 19308 "POST /ecounselling/apply/ HTTP/1.1" 500 117327
+ERROR 2022-07-26 15:41:46,399 log 22576 19308 Internal Server Error: /ecounselling/apply/
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\frontend\views.py", line 122, in ApplyCouponView
+    return redirect(reverse('ecounselling', kwargs={"discount_price": discount_price}))
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\urls\base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\urls\resolvers.py", line 729, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'ecounselling' with keyword arguments '{'discount_price': 250}' not found. 1 pattern(s) tried: ['ecounselling/\\Z']
+ERROR 2022-07-26 15:41:46,400 basehttp 22576 19308 "POST /ecounselling/apply/ HTTP/1.1" 500 117327
+ERROR 2022-07-26 15:42:04,236 log 25180 12600 Internal Server Error: /ecounselling/apply/
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\frontend\views.py", line 122, in ApplyCouponView
+    return redirect(reverse('ecounselling', kwargs={"discount_price": discount_price}))
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\urls\base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\urls\resolvers.py", line 729, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'ecounselling' with keyword arguments '{'discount_price': 250}' not found. 1 pattern(s) tried: ['ecounselling/\\Z']
+ERROR 2022-07-26 15:42:04,250 basehttp 25180 12600 "POST /ecounselling/apply/ HTTP/1.1" 500 117327
+ERROR 2022-07-26 15:44:52,318 views 14364 12916 Exception In:  EcounsellingView post request
+ERROR 2022-07-26 15:46:08,839 log 20388 9792 Internal Server Error: /ecounselling/
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\contrib\auth\mixins.py", line 71, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\views\generic\base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\frontend\views.py", line 155, in post
+    amount=plan.price-discount_price
+UnboundLocalError: local variable 'discount_price' referenced before assignment
+ERROR 2022-07-26 15:46:08,845 basehttp 20388 9792 "POST /ecounselling/ HTTP/1.1" 500 88710
+ERROR 2022-07-26 15:46:52,006 log 12748 11504 Internal Server Error: /ecounselling/
+Traceback (most recent call last):
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\contrib\auth\mixins.py", line 71, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\views\generic\base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\frontend\views.py", line 148, in post
+    plan=Plan.objects.get(id=plan_id)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Chandan\Desktop\pythonmate\AA\Apni-Academy\env\lib\site-packages\django\db\models\query.py", line 439, in get
+    raise self.model.DoesNotExist(
+api.models.Plan.DoesNotExist: Plan matching query does not exist.
+ERROR 2022-07-26 15:46:52,015 basehttp 12748 11504 "POST /ecounselling/ HTTP/1.1" 500 96601
+ERROR 2022-08-02 22:20:42,142 views 27916 28524 Exception In:  CollegePredictionView post request
+ERROR 2022-08-17 15:10:16,351 views 31720 51576 Exception In:  EcounsellingView post request
+ERROR 2022-08-17 15:10:27,968 views 31720 51576 Exception In:  EcounsellingView post request
+ERROR 2022-08-17 15:10:43,809 views 31720 51576 Exception In:  EcounsellingView post request
+ERROR 2022-08-17 15:11:44,494 views 31720 51576 Exception In:  EcounsellingView post request
+ERROR 2022-08-17 15:11:58,440 views 31720 51576 Exception In:  EcounsellingView post request
+ERROR 2022-08-17 15:13:40,158 views 31720 51576 Exception In:  EcounsellingView post request
+ERROR 2022-08-17 15:14:07,291 views 7060 11624 Exception In:  EcounsellingView post request
+ERROR 2022-08-17 15:14:42,418 views 7060 11624 Exception In:  EcounsellingView post request
+ERROR 2022-08-17 15:14:56,542 views 7060 11624 Exception In:  EcounsellingView post request
+ERROR 2022-08-17 15:19:17,847 views 7060 11624 Exception In:  EcounsellingView post request
+ERROR 2022-09-02 22:41:11,091 views 75848 77668 Exception In:  EcounsellingView post request
+ERROR 2022-09-02 22:41:20,753 views 75848 77668 Exception In:  EcounsellingView post request
+ERROR 2022-09-02 22:51:12,596 views 69704 77852 Exception In:  EcounsellingView post request
+ERROR 2022-09-02 22:52:28,464 views 63024 70412 Exception In:  EcounsellingView post request
+ERROR 2022-09-02 22:54:48,026 views 78124 31132 Exception In:  EcounsellingView post request
+ERROR 2022-09-02 22:55:36,259 views 78412 54040 Exception In:  EcounsellingView post request
+ERROR 2022-09-02 22:56:12,447 views 78412 54040 Exception In:  EcounsellingView post request
+ERROR 2022-09-02 22:58:58,174 views 69920 78556 Exception In:  EcounsellingView post request
+ERROR 2022-09-02 23:05:07,358 views 49392 76192 Exception In:  EcounsellingView post request
+ERROR 2022-09-02 23:07:33,373 views 76828 78676 Exception In:  EcounsellingView post request
+ERROR 2022-09-02 23:07:58,392 views 76828 45072 Exception In:  EcounsellingView post request
+ERROR 2022-09-03 00:23:07,567 views 76828 75692 Exception In:  EcounsellingView post request
+ERROR 2023-01-21 20:04:04,641 views 15316 48632 Exception In:  TestView

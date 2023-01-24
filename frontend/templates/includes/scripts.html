@@ -1,0 +1,91 @@
+{% load static %}
+<script>
+        let college_container = document.querySelector(".college-list-container");
+        colleges = fetch('/api/college/', {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
+            .then((res) => {
+                return res.json();
+            })
+            .then((result) => {
+                for (let i = 0; i < result.length; i += 2) {
+
+                     if( result[i].college_image){
+                         temp1=result[i].college_image
+                     }
+                     else{
+                         temp1="{% static '/assets/images/default.png' %}"
+                     }
+                     if(result[i+1].college_image){
+                         temp2=result[i+1].college_image
+                     }
+                     else{
+                         temp2="{% static '/assets/images/default.png' %}"
+                     }
+                    
+
+                    let x = ``;
+                    let y = ``;
+                    for (let j = 0; j < result[i].examsAcceptance.length; j++) {
+
+
+                        x += ` <button type="button">${result[i].examsAcceptance[j].exam_name}</button>`
+                        y += `<button type="button">${result[i + 1].examsAcceptance[j].exam_name}</button>`
+
+                    }
+
+
+
+                    let data = `
+                    <div class="college-row">
+                        <div class="college-card">
+                            <div class="college-header">
+                                
+                              
+                                <img src="${temp1}" alt="" class="college-img">
+                              
+                                <div>
+                                    <p class="clg-name">${result[i].college_name}</p>
+                                    <div style="margin-left:10px;"><button type="button" class="clg-category">${result[i].ownerShip}</button> </div>
+                                </div>
+                            </div>
+                            <div class="clg-location">
+                                <img src="{% static '/assets/images/location.svg' %}" alt="">
+                                    <p class="clg-city">${result[i].location}</p>
+                            </div>
+                            <div class="clg-exam" id="${result[i].id}">
+                                ${x}
+                            </div>
+                        </div>
+                        <div class="college-card">
+                            <div class="college-header">
+                               
+                                <img src="${temp2}" alt="" class="college-img">
+                              
+                                <div>
+                                    <p class="clg-name">${result[i + 1].college_name}</p>
+                                    <div style="margin-left:15px;"><button type="button" class="clg-category">${result[i + 1].ownerShip}</button> </div>
+                                </div>
+                            </div>
+                            <div class="clg-location">
+                                <img src="{% static '/assets/images/location.svg' %}" alt="">
+                                    <p class="clg-city">${result[i+1].location}</p>
+                            </div>
+                            <div class="clg-exam" id="${result[i + 1].id}">
+                                ${y}
+                           
+                               
+                            </div>
+                        </div>
+                    </div>
+                    `
+      
+
+                    college_container.innerHTML += data;
+                }
+
+            })
+    </script>

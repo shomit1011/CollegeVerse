@@ -1,0 +1,190 @@
+/* Loggedin User Page */
+
+.user-name button{
+  height: 40px;
+  border: none;
+  background: white;
+  font-weight: 700;
+}
+
+.user-img{
+  width: 25px;
+  margin: 0 0.4rem 8px 0.4rem;
+}
+
+/* Profile Page */
+
+.profile{
+  background: #EFF2FC;
+  margin: 4rem 7rem 4rem 7rem;
+  border-radius: 25px;
+}
+
+.profile-header{
+  max-width: 600px;
+  margin: auto;
+  padding: 2.5rem 0rem;
+  display: flex;
+}
+
+.personal-info{
+  padding: 2rem 3rem;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.purchased-section{
+  padding: 2rem 4.5rem;
+}
+
+.plans-head{
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 0 0 2rem 0;
+}
+
+.counseling-plan{
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.partition-line{
+  width: 70%;
+  color: #0083FF;
+  border-radius: 100px;
+}
+
+.college-wishlist{
+  padding: 2rem 4.5rem;
+}
+
+.wishlist-head{
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 0 0 2rem 0;
+}
+
+.stu-info{
+  max-width: 600px;
+  margin: auto;
+  padding: 0 0 2rem 0;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+}
+
+.clg-list{
+  max-width: 600px;
+  margin: auto;
+}
+
+.clg-name{
+  display: flex;
+  justify-content: space-between;
+}
+
+.clg-name p{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.clg-name img{
+  width: 20px;
+  height: 18px;
+}
+
+.add-clg-btn button{
+  width: 150px;
+  height: 40px;
+  border-radius: 40px;
+  border: 3px solid #0083FF;
+  background: white;
+  font-weight: 700;
+}
+
+.test-results{
+  padding: 2rem 4.5rem;
+}
+
+.results-head{
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 0 0 2rem 0;
+}
+
+.tests-list{
+  max-width: 600px;
+  margin: auto;
+}
+
+.test-given{
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+.test-given p{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.test-given button{
+  background: #0083FF;
+  width: 120px;
+  height: 40px;
+  border: none;
+  border-radius: 15px;
+  color: white;
+}
+
+
+@media screen and (max-width: 1100px) {
+ 
+.personal-info {
+  margin: 2rem auto;
+  font-size: 1.5vw;
+ }
+ .purchased-section {
+  margin: 2rem auto;
+ }
+ .plans-head {
+  font-size: 1.5vw;
+}
+.counseling-plan {
+  font-size: 1.5vw;
+}
+.wishlist-head {
+  font-size: 1.5vw;
+}
+.stu-info {
+  font-size: 1.5vw;
+}
+.clg-name p {
+  font-size: 1.5vw;
+}
+.clg-name img {
+  width: 1.5vw;
+  height: 3vh;
+}
+.add-clg-btn button {
+  font-size: 1.5vw;
+  width: 17vw;
+  height: 40px;
+  }
+  .results-head {
+    font-size: 1.5vw;
+  }
+  .test-given p {
+    font-size: 1.5vw;
+  }
+  .test-given button {
+    width: 17vw;
+    font-size: 1.5vw;
+  }
+}

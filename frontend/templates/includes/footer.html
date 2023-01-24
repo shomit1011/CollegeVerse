@@ -1,0 +1,55 @@
+{% load static %}
+<div class="footer-section">
+                <div class="blue-footer">
+                    <div class="footer-logo">
+                        <img class="logo-footer" src="{% static '/assets/images/cvlogo.jpeg' %}" alt="">
+                        <div class="footer-icons">
+                            <a href="https://www.youtube.com/c/ApniAcademy01"><img style="margin: 0.3rem 0.5rem 0 0;" src="{% static '/assets/images/youtube-icon.svg' %}" alt=""></a>
+                            <a href="https://www.instagram.com/apni.academy/"><img src="{% static '/assets/images/instagram-icon.svg' %}" alt=""></a>
+                            <a href="https://www.linkedin.com/company/apniacademy/"><img src="{% static '/assets/images/linkedin-icon.svg' %}" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="quick-links">
+                        <p class="quick-link-head">Quick Links</p>
+                        <div class="links-content">
+                            <p><a class="quick-link" href="{% url 'colleges' %}">Colleges</a></p>
+                            <p><a class="quick-link" href="{% url 'test-series' %}">Test Series</a></p>
+                            <p><a class="quick-link" href="" data-bs-toggle="modal" data-bs-target="#exampleModal">Counselling</a></p>
+                            <p><a class="quick-link" href="{% url 'college-prediction' %}">College Predictor</a></p>
+                            {% for cl in class_names %}
+                            <p><a class="quick-link" href="{% url 'note' cl.id %}">Class {{cl.class_name}} Notes </a></p>
+                            {% endfor %}
+                            <p><a class="quick-link" href="{% url 'previous-year-questions' %}">PYQs</a></p>
+                            <!-- <p><a class="quick-link" href="{% url 'legal' %}?q=tnc">Terms & Conditions</a></p>
+                            <p><a class="quick-link" href="{% url 'legal' %}?q=policy">Privacy Policy</a></p>
+                            <p><a class="quick-link" href="{% url 'legal' %}?q=refund_policy">Refund Policy</a></p>
+                            <p><a class="quick-link" href="{% url 'legal' %}?q=contact_us">Contact Us</a></p> -->
+                        </div>
+                    </div>
+                    <div class="quick-links terms">
+                        <p class="quick-link-head">Terms Of Use</p>
+                        <div class="links-content">
+                            <p><a class="quick-link" href="{% url 'legal' %}?q=tnc">Terms & Conditions</a></p>
+                            <p><a class="quick-link" href="{% url 'legal' %}?q=policy">Privacy Policy</a></p>
+                            <p><a class="quick-link" href="{% url 'legal' %}?q=refund_policy">Refund Policy</a></p>
+                            <p><a class="quick-link" href="{% url 'legal' %}?q=contact_us">Contact Us</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-us">
+                        <p class="contact-us-head">Contact Us</p>
+                        <div class="contact-us-content">
+                            <p>+91-8986357601</p>
+                            <p>+91-7632929451</p>
+                            <p>+91-9039081171</p>
+                            <p style="padding-top: 20px;">helpdesk@thecollegeverse.in</p>
+                            <p>apniacademy01@gmail.com</p>
+                        </div>
+                        <!-- <div class="contact-us-add" style="width: auto;">
+                            <p>Address - LP - 928, Prashanti Vihar, Near KIIT Campus, Bhubaneshwar, Odisha - 751024</p>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="black-footer">
+                    <p>CollegeVerse - Brought to you by Apni Academy <br> Learn To Love To Learn </p>
+                </div>
+            </div>

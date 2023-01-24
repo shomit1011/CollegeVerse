@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mock Test</title>
+  <!-- favicon -->
+  <link rel="icon" type="image/x-icon" href="{% static '/assets/images/cvlogo.jpeg' %}" />
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <!-- css -->
+  <link rel="stylesheet" href="{% static '/css/med_style.css' %}" />
+  <link rel="stylesheet" href="{% static '/css/style.css' %}" />
+  <link rel="stylesheet" href="{% static '/css/test_window_style.css' %}" />
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet" />
+  <style>
+    .myactive {
+      background-color: white;
+      padding: 0.5rem;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+
+    .btnactive {
+      background-color: green;
+      color: white;
+    }
+
+    .show {
+      display: block;
+    }
+
+    .hide {
+      display: none;
+    }
+    /* .instruction{
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: rgb(0,0,0);
+      background-color: rgba(0,0,0, 0.9);
+      overflow-x: hidden;
+      transition: 0.5s;
+    } */
+    .overlay{
+        height: 100vh;
+        max-width: 900px;
+        margin: auto;
+        padding: 2rem 0;
+    }
+    .test-ins-head p{
+        font-size: 38px;
+        font-weight: 700;
+        text-align: center;
+    }
+    .test-ins{
+        padding: 1rem 0;
+    }
+    .instruction{
+    width: 130px;
+    height: 45px;
+    border-radius: 40px;
+    border: 3px solid #0083FF;
+    background: white;
+    font-weight: 700;
+    }
+    .instruction:hover{
+    background: #0083FF;
+    color: white;
+    border: none;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <div class="instruction"> dcs</div> -->
+  
+  <div class="main-container">
+    <div class="white_ellipse">
+      <div class="overlay">
+        <div class="test-ins-head">
+            <p>Mock Test Instructions</p>
+        </div>
+        <div class="test-ins">
+            <p>Kindly go through the Instructions very carefully and do as directed :-</p>
+            <ul>
+                <li>The test is of <b>3 hours duration</b>.</li>
+                <li>This test paper consists of <b>75 questions. The maxium marks are 300.</b></li>
+                <li>This test is divided into three subjects, namely <b>Physics, Chemistry and Mathematics.</b> Each section will have 30 questions.</li>
+                <li>Each subject will have two sections :-</li>
+                <ul>
+                    <li>Section - A -> <b>20 MCQs</b> will be asked in this section and <b>all questions must be answered.</b></li>
+                    <li>Section - B -> <b>10 numerical questions</b> will be given in this section out of which <b>any 5 must be attempted.</b></li>
+                </ul>
+                <li><b>For each correct answer, 4 marks will be awarded.</b></li>
+                <li>There will be negative marking in both the sections, <b>1 mark will be deducted for every wrong answer.</b></li>
+                <li>Out of the four options given <b>for each question, only one option is the correct answer.</b></li>
+                <li>The test will be conducted in a full screen mode and <b>any attempt to exit the full screen mode will result in the final submission of the test.</b></li>
+                <li>You may attempt the test in any order you wish to. There is no restictions in solving the test in any sequential order.</li>
+                <li>You may navigat through the questions by simply clicking on the question number matrix, provided in the right window of your screen.</li>
+                <li>To select any option in the MCQ, simply click on the circular button beside every option ◉. To deselect the selectiod option, just double click on the same circular button 🔘. </li>
+                <li>For all the attempted questions, a green colour will be assigned to the question number. All other unattempted question will be unmarked or colourless.</li>
+            </ul>
+            <p>Keep in mind all the instructions and a very <b>Best of Luck</b> for your Test 👍 . </p>
+        </div>
+        <button class="instruction">Start the Test</button>
+      </div>
+      
+      <!--card-->
+      <div class="sub_dis hide" style="height: 100vh;">
+        <div class="center_sub" style="margin: 10vh 0 20vh 0;">
+          <div class="card_sub_mt">
+            <div class="blue_box">
+              <h4>Mock Test-01</h4>
+              <div> <span id="time">180:00</span> minutes!</div>
+            </div>
+            <div class="mt_body">
+              <div class="mt_que">
+                <div class="mt_sub">
+                  {% for sec in sections %}
+                  {% if forloop.counter == 1 %}
+                  <h6 id="section-{{forloop.counter}}" class="myactive section first_section" style="cursor: pointer;">
+                    {{sec.subject_name}}</h6>
+
+                  {% else %}
+                  <h6 id="section-{{forloop.counter}}" style="cursor: pointer;" class="section">{{sec.subject_name}}
+                  </h6>
+                  {% endif %}
+                  {% endfor %}
+                </div>
+                <hr style="margin: 0 auto;">
+
+                <div class="question_container">
+                  <!-- section 1 questions -->
+                  {% for q in q1 %}
+                  {% if q.type == "MCQ" %}
+                  <form action="" method="post" class="que hide subject-1" id="ques-{{q.id}}"
+                    data-subject="{{q.section.subject_name}}"> {% csrf_token %}
+                    <p> <b>{{forloop.counter}}: </b> {{q.question}}</p>
+                    <input type="radio" name="option" value="1">
+                    <label>{{q.option_one}}</label><br>
+                    <input type="radio" name="option" value="2">
+                    <label>{{q.option_two}}</label><br>
+                    <input type="radio" name="option" value="3">
+                    <label>{{q.option_three}}</label><br>
+                    <input type="radio" name="option" value="4">
+                    <label>{{q.option_four}}</label>
+                  </form>
+
+                  {% else %}
+                  <form action="" method="post" class="que hide subject-1" id="ques-{{q.id}}"
+                    data-subject="{{q.section.subject_name}}"> {% csrf_token %}
+                    <p><b>{{forloop.counter}}: </b> {{q.question}}</p>
+                    <input type="text" name="ans" class="int-type-question">
+                  </form>
+                  {% endif %}
+                  {% endfor %}
+                  <!-- section 2 question -->
+                  {% for q in q2 %}
+                  {% if q.type == "MCQ" %}
+                  <form action="" method="post" class="que hide subject-2" id="ques-{{q.id}}"
+                    data-subject="{{q.section.subject_name}}"> {% csrf_token %}
+                    <p><b>{{forloop.counter}}: </b> {{q.question}}</p>
+                    <input type="radio" name="option" value="1">
+                    <label>{{q.option_one}}</label><br>
+                    <input type="radio" name="option" value="2">
+                    <label>{{q.option_two}}</label><br>
+                    <input type="radio" name="option" value="3">
+                    <label>{{q.option_three}}</label><br>
+                    <input type="radio" name="option" value="4">
+                    <label>{{q.option_four}}</label>
+                  </form>
+
+                  {% else %}
+                  <form action="" method="post" class="que hide subject-2" id="ques-{{q.id}}"
+                    data-subject="{{q.section.subject_name}}"> {% csrf_token %}
+                    <p><b>{{forloop.counter}}: </b> {{q.question}}</p>
+                    <input type="text" name="ans" class="int-type-question">
+                  </form>
+                  {% endif %}
+                  {% endfor %}
+
+                  <!-- section 3 questions -->
+                  {% for q in q3 %}
+                  {% if q.type == "MCQ" %}
+                  <form action="" method="post" class="que hide subject-3" id="ques-{{q.id}}"
+                    data-subject="{{q.section.subject_name}}"> {% csrf_token %}
+                    {% if not q.question %}
+                    <p><b>{{forloop.counter}}: </b> <img src="{{q.get_question_image_url}}" alt="" style="width: 100px;height: 100px;"></p>
+                    {% else %}
+                    <p><b>{{forloop.counter}}: </b> {{q.question}}</p>
+                    {% endif %}
+                    <input type="radio" name="option" value="1">
+                    <label>{{q.option_one}}</label><br>
+                    <input type="radio" name="option" value="2">
+                    <label>{{q.option_two}}</label><br>
+                    <input type="radio" name="option" value="3">
+                    <label>{{q.option_three}}</label><br>
+                    <input type="radio" name="option" value="4">
+                    <label>{{q.option_four}}</label>
+                  </form>
+
+                  {% else %}
+                  <form action="" method="post" class="que hide subject-3" id="ques-{{q.id}}"
+                    data-subject="{{q.section.subject_name}}"> {% csrf_token %}
+                    <p><b>{{forloop.counter}}: </b> {{q.question}}</p>
+                    <input type="text" name="ans" class="int-type-question">
+                  </form>
+                  {% endif %}
+
+
+                  {% endfor %}
+                </div>
+
+
+              </div>
+              <div class="mt_que_num" id="math">
+                <div style="font-size: 1.4em;">
+                  <center id="center" class="center"></center>
+                </div>
+                <hr style="margin: 4px auto;">
+                <div id="pagination-container-1" class="contain_mt">
+                  {% for q in q1 %}
+                  <div class="q pagination-number" id="pagination-{{q.id}}" style="cursor: pointer;">{{forloop.counter}}
+                  </div>
+                  {% endfor %}
+                </div>
+                <div id="pagination-container-2" class="contain_mt hide">
+                  {% for q in q2 %}
+                  <div class="q pagination-number" id="pagination-{{q.id}}" style="cursor: pointer;">{{forloop.counter}}
+                  </div>
+                  {% endfor %}
+                </div>
+                <div id="pagination-container-3" class="contain_mt hide">
+                  {% for q in q3 %}
+                  <div class="q pagination-number" id="pagination-{{q.id}}" style="cursor: pointer;">{{forloop.counter}}
+                  </div>
+                  {% endfor %}
+                </div>
+              </div>
+
+
+            </div>
+            <!-- <div class="t_w_sub"><button type="button" class="btn btn-primary ">Submit answer</button></div> -->
+            <div class="t_w_sub"><button type="button" class="btn btn-success submit_btn">Submit paper</button></div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="hidden_form_container">
+        <form action="{% url 'result' %}" method="post" style="display:none;" class="hidden_form"> {% csrf_token %}
+          <input type="text" name="total_time">
+          <input type="text" name="paper_id" value="">
+          <input type="text" name="correct_questions" value="">
+          <input type="text" name="incorrect_questions" value="">
+          <input type="text" name="score" value="">
+          <input type="text" name="subject_1" value="">
+          <input type="text" name="subject_1_marks" value="">
+          <input type="text" name="subject_2" value="">
+          <input type="text" name="subject_2_marks" value="">
+          <input type="text" name="subject_3" value="">
+          <input type="text" name="subject_3_marks" value="">
+          <input type="text" name="positive_marks" value="">
+          <input type="text" name="negetive_marks" value="">
+          <input type="submit" value="submit" class="hidden_form_btn">
+        </form>
+      </div>
+
+
+    </div>
+  </div>
+  <script src="{% static 'js/index.js' %}"></script>
+  <script src="{% static 'js/que.js' %}"></script>
+  <script>
+    let paper_id = "{{paper_id}}";
+    let sections = document.getElementsByClassName("section")
+    let pagination = document.querySelector("#pagination");
+    let question_container = document.querySelector(".question_container");
+
+    // double click to uncheck a radio btn
+    for (const iter of document.querySelectorAll('input[type=radio]')) {
+      iter.addEventListener("dblclick", function () {
+        this.checked = false
+      })
+
+    }
+
+
+    for (const ele of sections) {
+
+      // getting subject name for center tag (pagination div)
+      ele.addEventListener("click", function () {
+        i = Array.from(sections).indexOf(ele);
+        if (i == 0) {
+          for (const iter of document.querySelectorAll(".que")) {
+            iter.classList.add("hide")
+          }
+          document.querySelector(".subject-1").classList.remove('hide');
+        }
+        else if (i == 1) {
+          for (const iter of document.querySelectorAll(".que")) {
+            iter.classList.add("hide")
+          }
+          document.querySelector(".subject-2").classList.remove('hide');
+        }
+        else if (i == 2) {
+          for (const iter of document.querySelectorAll(".que")) {
+            iter.classList.add("hide")
+          }
+          document.querySelector(".subject-3").classList.remove('hide');
+        }
+        document.getElementsByClassName("myactive")[0].classList.remove("myactive");
+        this.classList.add("myactive");
+        document.querySelector(".center").innerText = this.innerText;
+
+        // ------------------------------------
+        let section_no = this.id.split("-")[1]
+        let pagination_container = document.querySelector(`#pagination-container-${section_no}`);
+        for (const iterator of document.querySelectorAll(".contain_mt")) {
+          iterator.classList.add('hide');
+        }
+        pagination_container.classList.remove('hide');
+
+
+      });
+    }
+  </script>
+
+  <script>
+    document.body.addEventListener('click', function (e) {
+      if (e.target.classList.contains("q")) {
+        let element = e.target;
+        let element_id = element.id.split("-")[1];
+
+        for (const iter of document.querySelectorAll(".que")) {
+          iter.classList.add("hide")
+        }
+        document.querySelector(`#ques-${element_id}`).classList.remove("hide");
+      }
+
+    })
+  </script>
+  <script>
+
+    fetch(`/api/paper/questions/${paper_id}/`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then(res => res.json())
+      .then(response => {
+
+
+        let submitBtn = document.querySelector(".submit_btn");
+        submitBtn.addEventListener('click', function (e) {
+          var score = 0;
+          var correct_questions = 0
+          var incorrect_questions = 0
+          var total_marks = 0
+          var subject_1 = "{{sections.0.subject_name}}";
+          var subject_1_marks = 0;
+          var subject_2 = "{{sections.1.subject_name}}";
+          var subject_2_marks = 0;
+          var subject_3 = "{{sections.2.subject_name}}";
+          var subject_3_marks = 0;
+          var positive_marks = 0;
+          var negetive_marks = 0;
+
+
+          let forms = document.getElementsByClassName("que");
+          for (const fm of forms) {
+            try {
+              let mcqans = fm.elements['option'].value;
+              if (mcqans) {
+                for (const q of response) {
+
+                  if (q.id == fm.id.split("-")[1]) {
+                    if (mcqans == q.answer) {
+                      score += q.total_marks; correct_questions += 1;
+                      if (q.section == subject_1) { subject_1_marks += q.total_marks; }
+                      if (q.section == subject_2) { subject_2_marks += q.total_marks; }
+                      if (q.section == subject_3) { subject_3_marks += q.total_marks; }
+                      positive_marks += q.total_marks;
+                    }
+                    else {
+                      score -= q.negetive_marks; incorrect_questions += 1;
+                      if (q.section == subject_1) { subject_1_marks -= q.negetive_marks; }
+                      if (q.section == subject_2) { subject_2_marks -= q.negetive_marks; }
+                      if (q.section == subject_3) { subject_3_marks -= q.negetive_marks; }
+                      negetive_marks -= q.negetive_marks;
+                    }
+
+                  }
+                }
+              }
+            }
+            catch {
+              let intans = fm.elements['ans'].value;
+              if (intans) {
+                for (const q of response) {
+                  if (q.id == fm.id.slice(-1)) {
+                    if (intans == q.answer) {
+                      score += q.total_marks; correct_questions += 1;
+                      if (q.section == subject_1) { subject_1_marks += q.total_marks; }
+                      if (q.section == subject_2) { subject_2_marks += q.total_marks; }
+                      if (q.section == subject_3) { subject_3_marks += q.total_marks; }
+                      positive_marks += q.total_marks;
+                    }
+                    else {
+                      score -= q.negetive_marks; incorrect_questions += 1;
+                      if (q.section == subject_1) { subject_1_marks -= q.negetive_marks; }
+                      if (q.section == subject_2) { subject_2_marks -= q.negetive_marks; }
+                      if (q.section == subject_3) { subject_3_marks -= q.negetive_marks; }
+                      negetive_marks -= q.negetive_marks;
+                    }
+
+                  }
+                }
+              }
+            }
+          }
+
+          time_left = document.querySelector("#time").innerText;
+
+          minute_left = parseInt(time_left.split(":")[0]);
+          // second_left = parseInt(time_left.split(":")[1]);
+          minute_taken = 180 - minute_left;
+          // if (second_left != 0){
+          // second_taken = 60 - second_left;
+          // }
+
+
+
+          let hidden_form = document.querySelector(".hidden_form")
+          let hidden_form_btn = document.querySelector('.hidden_form_btn');
+          hidden_form_btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            hidden_form.elements['total_time'].value = parseInt(minute_taken/60)+"h "+minute_taken%60+"mins";
+            hidden_form.elements['paper_id'].value = paper_id;
+            hidden_form.elements['correct_questions'].value = correct_questions;
+            hidden_form.elements['incorrect_questions'].value = incorrect_questions;
+            hidden_form.elements['score'].value = score;
+            hidden_form.elements['subject_1'].value = subject_1;
+            hidden_form.elements['subject_1_marks'].value = subject_1_marks;
+            hidden_form.elements['subject_2'].value = subject_2;
+            hidden_form.elements['subject_2_marks'].value = subject_2_marks;
+            hidden_form.elements['subject_3'].value = subject_3;
+            hidden_form.elements['subject_3_marks'].value = subject_3_marks;
+            hidden_form.elements['positive_marks'].value = positive_marks;
+            hidden_form.elements['negetive_marks'].value = negetive_marks;
+            hidden_form.submit();
+
+          })
+          hidden_form_btn.click();
+
+        })
+
+
+      });
+
+  </script>
+  {% comment %} timer JS {% endcomment %}
+  <script>
+    function startTimer(duration, display) {
+      var timer = duration, minutes, seconds;
+      setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+          timer = duration;
+        }
+      }, 1000);
+    }
+
+
+  </script>
+
+
+  <script>
+    for (const e of document.querySelectorAll('input[type=radio]')) {
+      e.addEventListener('click', function () {
+        let fm = e.parentElement;
+        let question_id = fm.id.split("-")[1];
+        let pagination_element = document.querySelector(`#pagination-${question_id}`)
+        if (this.checked) {
+          pagination_element.classList.add("btnactive");
+        }
+      })
+      e.addEventListener('dblclick', function () {
+        if (this.checked == false) {
+          let fm = e.parentElement;
+          let question_id = fm.id.split("-")[1];
+          let pagination_element = document.querySelector(`#pagination-${question_id}`)
+          pagination_element.classList.remove('btnactive');
+        }
+      })
+
+    }
+    for (const e of document.querySelectorAll(".int-type-question")) {
+      e.addEventListener('input', function () {
+        let fm = e.parentElement;
+        let question_id = fm.id.split("-")[1];
+        let pagination_element = document.querySelector(`#pagination-${question_id}`);
+        if (this.value) {
+          pagination_element.classList.add("btnactive");
+        }
+        else {
+          pagination_element.classList.remove('btnactive');
+        }
+      })
+
+    }
+  </script>
+
+<!-- click on first section on page reload -->
+  <script>
+    let first_section = document.getElementsByClassName("first_section")[0];
+    first_section.click();
+  </script>
+
+<!-- makem full window page -->
+  <script type="text/javascript">
+    
+        let btn = document.querySelector('.instruction');
+          let overlay = document.querySelector('.overlay')
+        btn.addEventListener('click',function(){
+                         document.documentElement.requestFullscreen().catch((e) => {
+            console.log("error occured");
+
+          })
+          document.querySelector('.sub_dis').classList.remove('hide');
+          overlay.classList.add('hide');
+               var fiveMinutes = 60 * 180,
+            display = document.querySelector('#time');
+          startTimer(fiveMinutes, display);
+              setTimeout(function () {
+            let submitBtn = document.querySelector(".submit_btn");
+            submitBtn.click();
+          }, 10800000);
+        })
+ 
+  </script>
+
+  <!-- submit test on exit out of full screen -->
+  <script>
+          if (document.addEventListener) {
+              document.addEventListener('webkitfullscreenchange', exitHandler, false);
+              document.addEventListener('mozfullscreenchange', exitHandler, false);
+              document.addEventListener('fullscreenchange', exitHandler, false);
+              document.addEventListener('MSFullscreenChange', exitHandler, false);
+            }
+              function exitHandler() {
+                  if (!document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement) {
+                    let submitBtn = document.querySelector(".submit_btn");
+                    submitBtn.click();
+        }
+                }
+  </script>
+</body>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mock Test</title>
+  favicon
+  <link rel="icon" type="image/x-icon" href="{% static '/assets/images/cvlogo.jpeg' %}" />
+  bootstrap
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  css
+  <link rel="stylesheet" href="{% static '/css/med_style.css' %}" />
+  <link rel="stylesheet" href="{% static '/css/style.css' %}" />
+  <link rel="stylesheet" href="{% static '/css/test_window_style.css' %}" />
+  fonts
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet" />
+</head>
+Google tag (gtag.js)
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QSPRWC08J8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QSPRWC08J8');
+</script>
+
+<body>
+  <div class="instruction"> dcs</div>
+  
+  <div class="main-container">
+    <div class="white_ellipse" style="height: 100vh;">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScR3YCsn0Lz1c1STOpDp6rWL-9BPcl7f5mPnedvSpLrZj26VA/viewform?embedded=true" width="100%" height="99%" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  </div>    
+</body>
+
+</html> -->

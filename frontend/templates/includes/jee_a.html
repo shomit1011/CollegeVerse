@@ -1,0 +1,57 @@
+<div class="sub_dis">
+  <div class="center_sub">
+    <div class="card_sub" style="height: 70vh;">
+      <div class="card-body_sub">
+        <div style="width:100%">
+          <form action="" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="exam_name" value="{{exam_name}}">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend" style="width: 8vw;">
+                <label class="input-group-text" for="inputGroupSelect01">Category :</label>
+              </div>
+              <select class="custom-select" id="inputGroupSelect01" style="width: 86.5%;" name="category"
+                onchange="changeClass1( value)">
+                <option selected value="">Select category</option>
+                {% for cat in categories %}
+                <option value="{{cat}}">{{cat.category_name}}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="sc">Enter your category rank only : </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend" style="width: 8vw !important;">
+                <label class="input-group-text" id="basic-addon1">Enter your rank : </label>
+              </div>
+              <input type="number" class="form-control" placeholder="rank" aria-label="Username"
+                aria-describedby="basic-addon1" name="rank">
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend" style="width: 8vw;">
+                <label class="input-group-text" for="inputGroupSelect02">Gender : </label>
+              </div>
+              <select class="custom-select" id="inputGroupSelect02" style="width: 86.5%;" name="gender">
+                <option selected value="">Select</option>
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+              </select>
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend" style="width: 8vw;">
+                <label class="input-group-text" for="inputGroupSelect03">State : </label>
+              </div>
+              <select class="custom-select" id="inputGroupSelect03" style="width: 86.5%;" name="state_id">
+                <option selected value="">Select</option>
+                {% for state in states %}
+                <option value="{{state.id}}">{{state.state_name}}</option>
+                {% endfor %}
+              </select>
+
+            </div>
+            <button type="submit" class="btn btn-primary">submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
