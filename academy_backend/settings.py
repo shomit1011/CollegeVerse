@@ -25,8 +25,9 @@ SECRET_KEY = 'django-insecure-m)15nu4lf87cgq2-a1#8r0#myza2(9$2smwym87h#zz-w&skd_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["134.209.153.178","www.thecollegeverse.in","thecollegeverse.in","*"]
+# ALLOWED_HOSTS = ["134.209.153.178","www.thecollegeverse.in","thecollegeverse.in","*"]
 
+ALLOWED_HOSTS = ['.versel.app', '.now.sh', '127.0.0.1']
 
 # Application definition
 
@@ -268,3 +269,7 @@ SOCIALACCOUNT_PROVIDERS = {
 
 
 FILE_UPLOAD_MAX_MEMORY_SIZE = 15242880
+
+import os
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')

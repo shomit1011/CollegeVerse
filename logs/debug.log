@@ -1052,3 +1052,33 @@ ERROR 2022-09-02 23:07:33,373 views 76828 78676 Exception In:  EcounsellingView 
 ERROR 2022-09-02 23:07:58,392 views 76828 45072 Exception In:  EcounsellingView post request
 ERROR 2022-09-03 00:23:07,567 views 76828 75692 Exception In:  EcounsellingView post request
 ERROR 2023-01-21 20:04:04,641 views 15316 48632 Exception In:  TestView
+ERROR 2023-01-29 23:31:44,928 exception 2628 20004 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+ERROR 2023-01-29 23:31:45,269 exception 2628 4496 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+ERROR 2023-01-29 23:31:57,901 exception 1648 20284 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+ERROR 2023-01-29 23:31:58,150 exception 1648 17008 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+ERROR 2023-01-29 23:31:58,927 exception 1648 16004 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+ERROR 2023-01-29 23:31:59,007 exception 1648 6320 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+ERROR 2023-01-29 23:32:09,237 exception 19988 10508 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+ERROR 2023-01-29 23:32:09,485 exception 19988 12208 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+ERROR 2023-01-29 23:32:19,090 exception 19988 3132 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+ERROR 2023-01-29 23:32:19,185 exception 19988 1864 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+ERROR 2023-01-29 23:32:20,655 exception 19988 18936 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+ERROR 2023-01-29 23:32:20,733 exception 19988 11824 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+ERROR 2023-01-29 23:32:33,745 exception 19988 19536 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+ERROR 2023-01-29 23:32:33,822 exception 19988 20352 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+ERROR 2023-01-29 23:32:35,999 exception 19988 4564 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+ERROR 2023-01-29 23:32:36,078 exception 19988 18340 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+ERROR 2023-01-29 23:32:36,565 exception 19988 14536 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+ERROR 2023-01-29 23:32:36,652 exception 19988 19620 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+ERROR 2023-01-29 23:32:36,748 exception 19988 17568 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+ERROR 2023-01-29 23:32:36,831 exception 19988 12636 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+ERROR 2023-01-29 23:33:27,574 exception 5852 20192 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+ERROR 2023-01-29 23:33:27,824 exception 5852 2092 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+ERROR 2023-01-29 23:34:25,665 exception 17868 10148 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+ERROR 2023-01-29 23:34:25,755 exception 17868 3624 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+ERROR 2023-01-29 23:34:26,471 exception 17868 19560 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+ERROR 2023-01-29 23:34:26,584 exception 17868 20060 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+ERROR 2023-01-29 23:34:28,509 exception 17868 11584 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+ERROR 2023-01-29 23:34:28,583 exception 17868 20348 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+ERROR 2023-01-29 23:34:32,160 exception 17868 1624 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+ERROR 2023-01-29 23:34:32,236 exception 17868 18368 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
