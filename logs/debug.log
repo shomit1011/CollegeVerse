@@ -1082,3 +1082,5 @@ ERROR 2023-01-29 23:34:28,509 exception 17868 11584 Invalid HTTP_HOST header: '1
 ERROR 2023-01-29 23:34:28,583 exception 17868 20348 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
 ERROR 2023-01-29 23:34:32,160 exception 17868 1624 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
 ERROR 2023-01-29 23:34:32,236 exception 17868 18368 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+ERROR 2023-04-26 17:51:37,346 views 14760 6512 Exception In:  TestView
+ERROR 2023-07-07 21:38:59,691 views 17232 1200 Exception In:  TestView
